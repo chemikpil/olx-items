@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { reducers } from './list';
 
 const appReducers = combineReducers({
-    reducers
+    store: reducers
 });
 
 export default appReducers;

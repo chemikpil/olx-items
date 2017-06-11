@@ -7,6 +7,10 @@ class App extends Component {
     this.props.fetchItems();
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log(nextProps, nextState);
+  }
+
   render() {
     return (
       <div className="App">

@@ -9,8 +9,8 @@ import NotFound from '../NotFound';
 
 const Root = ({ store }) => (
     <Provider store={store}>
-        <Router>
-            <App>
+        <App>
+            <Router>
                 <Switch>
                     <Route exact path="/" component={List} />
                     <Route path="/list" component={List} />
@@ -18,8 +18,8 @@ const Root = ({ store }) => (
                     <Route path="/item/:id" component={Item} />
                     <Route component={NotFound} />
                 </Switch>
-            </App>
-        </Router>
+            </Router>
+        </App>
     </Provider>
 );
 

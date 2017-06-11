@@ -21,7 +21,7 @@ export const fetchItems = () => (dispatch) => {
     return fetch(apiUrl)
         .then(response => response.json())
         .then(data => dispatch(fetchItemsSuccess(data)))
-        .catch(dispatch({
+        .catch(err => dispatch({
             type: FETCH_ITEMS_FAILURE
         }));
 };
