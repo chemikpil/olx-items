@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchItems();
+  }
+
   render() {
     return (
       <div className="App">
@@ -15,5 +20,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  fetchItems: PropTypes.func.isRequired
+};
 
 export default App;
