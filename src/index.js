@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
 import Root from './components/Root';
 import registerServiceWorker from './registerServiceWorker';
+import configureStore from './configureStore';
 import './index.css';
 
-const store = createStore(state => state);
+const store = configureStore();
 
 render(
     <Root store={store} />, 
