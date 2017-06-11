@@ -30,7 +30,7 @@ const pagination = (state = Map(), action) => {
                 pages: itemsId
             }) : Map();
         case CHANGE_PAGE:
-            return state.setIn('currentPage', action.page);
+            return state.set('currentPage', action.page);
         default:
             return state;
     }

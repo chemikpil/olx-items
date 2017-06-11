@@ -5,6 +5,11 @@ const getPageIDs = state => state.store.pagination && state.store.pagination.get
 
 export const getPage = state => state.store.pagination && state.store.pagination.get('currentPage');
 
+export const getPagesLength = createSelector(
+    getPageIDs,
+    pages => pages && pages.length
+)
+
 export const getItemOnCurrentPage = createSelector(
     [getItems, getPageIDs, getPage],
     (items, ids, page) => items.filter(item => ids[page-1].find(id => id === item.id))

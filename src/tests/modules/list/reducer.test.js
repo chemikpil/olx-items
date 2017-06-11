@@ -104,7 +104,7 @@ describe('List reducer', () => {
             reducers({}, {
                 type: actions.CHANGE_PAGE,
                 page: 2
-            }).pagination.getIn('currentPage')
+            }).pagination.get('currentPage')
         ).toEqual(2);
     })
 });

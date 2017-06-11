@@ -5,6 +5,7 @@ import ListComponent from '../components/List';
 
 const mapStateToProps = (state) => ({
     currentPage: selectors.getPage(state) || 1,
+    pages: selectors.getPagesLength(state) || 0,
     items: selectors.getItemOnCurrentPage(state) || []
 });
 

@@ -22,11 +22,12 @@ class List extends Component {
     }
 
     render() {
-        const { items } = this.props;
+        const { items, currentPage, pages, changePage } = this.props;
 
         return (
             <div>
                 {items.size ? this.getItems(items) : <span>No items</span>}
+                {pages && <Pagination currentPage={currentPage} pages={pages} onClick={changePage}/>}
             </div>
         )
     }
@@ -34,7 +35,9 @@ class List extends Component {
 
 List.propTypes = {
     currentPage: PropTypes.number.isRequired,
-    items: PropTypes.object
+    pages: PropTypes.number.isRequired,
+    items: PropTypes.object,
+    changePage: PropTypes.func
 }
 
 export default List;
