@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
+import reducers from './modules';
 
 const configureStore = () => {
     const middleware = [];
@@ -8,7 +9,7 @@ const configureStore = () => {
     }
 
     return createStore(
-        state => state,
+        reducers,
         applyMiddleware(...middleware)
     );
 };
