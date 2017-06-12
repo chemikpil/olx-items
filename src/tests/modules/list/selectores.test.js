@@ -35,4 +35,8 @@ describe('List selectors', () => {
     test('should return lenght of pages', () => {
         expect(selectors.getPagesLength(state)).toEqual(2);
     });
+
+    test('should return corret item', () => {
+        expect(selectors.getItemDetails(state, 2)).toEqual({id: 2, item: 2});
+    })
 });
