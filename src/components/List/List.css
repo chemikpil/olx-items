@@ -1,0 +1,28 @@
+.List {
+    padding-top: 20px;
+}
+
+.List__header {
+    margin-bottom: 20px;
+    color: #28485E;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.List__items {
+    display: grid;
+    grid-template: auto / 100%;
+    grid-gap: 20px 20px;
+}
+
+@media screen and (min-width: 640px) {
+    .List__items {
+        grid-template: 450px / calc(50% - 10px) calc(50% - 10px);
+    }        
+}
+
+@media screen and (min-width: 800px) {
+    .List__items {
+        grid-template: 225px / calc(50% - 10px) calc(50% - 10px);
+    }  
+}

@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import Root from './components/Root';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './configureStore';
-import './index.css';
 
 const store = configureStore();
 

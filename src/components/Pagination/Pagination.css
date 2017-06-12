@@ -1,0 +1,22 @@
+.Pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;    
+}
+
+.Pagination__item {
+    width: 34px;
+    height: 34px;
+
+    color: #28485E;
+    text-align: center;
+    line-height: 34px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.Pagination__item--active {
+    background-color: #28485E;
+
+    color: #FFF;
+}

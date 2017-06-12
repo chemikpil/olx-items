@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './normalize.css';
 import './App.css';
+import logo from './img/logo.png';
 
 class App extends Component {
   componentDidMount() {
@@ -14,10 +16,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <div className="App-intro">
+        <header className="App__header">
+          <h1>
+            <a href="/">
+              <img src={logo} alt="OLX"/>
+            </a>
+          </h1>
+        </header>
+        <div className="App__content">
           {this.props.children}
         </div>
       </div>

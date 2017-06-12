@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import './Pagination.css';
 
 class Pagination extends Component{
     getLinks() {
@@ -9,13 +10,19 @@ class Pagination extends Component{
 
         for (let page = 1; page <= pages; page ++) {
             if (page === currentPage) {
-                links.push(<span key={page}>{page}</span>)
+                links.push(
+                    <span 
+                        key={page}
+                        className="Pagination__item Pagination__item--active"
+                    >{page}</span>
+                    )
             } else {
                 links.push(
                     <Link 
                         key={page} 
                         to={`/list/${page}`}
                         onClick={() => onClick(page)}
+                        className="Pagination__item"
                     >{page}</Link>
                 );
             }
@@ -26,7 +33,7 @@ class Pagination extends Component{
 
     render() {
         return(
-            <div>
+            <div className="Pagination">
                 {this.getLinks()}
             </div>
         )
