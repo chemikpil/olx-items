@@ -15,6 +15,10 @@
     margin-bottom: 0;
 }
 
+.Item__list__meta {
+    margin-top: 10px;
+}
+
 .List__item__figure {
     min-width: 130px;
     width: 130px;

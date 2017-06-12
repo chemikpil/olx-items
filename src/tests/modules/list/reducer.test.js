@@ -9,7 +9,10 @@ describe('List reducer', () => {
         ).toEqual({
             list: List(),
             isFetching: false,
-            pagination: Map()
+            pagination: Map({
+                currentPage: 1,
+                pages: []
+            })
         });
     });
 

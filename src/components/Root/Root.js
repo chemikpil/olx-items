@@ -13,8 +13,8 @@ const Root = ({ store }) => (
             <Router>
                 <Switch>
                     <Route exact path="/" component={List} />
-                    <Route path="/list" component={List} />
                     <Route path="/list/:page" component={List} />
+                    <Route path="/list" component={List} />
                     <Route path="/item/:id" component={Item} />
                     <Route component={NotFound} />
                 </Switch>

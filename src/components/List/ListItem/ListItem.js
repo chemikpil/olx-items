@@ -9,7 +9,7 @@ const ListItem = ({ title, id, data, location }) => (
         <Link to={`/item/${id}`}>
             <header>
                 <h3 className="Item__list__title">{title}</h3>
-                <p><time>{data}</time> | {location}</p>
+                <p className="Item__list__meta"><time>{data}</time> | {location}</p>
             </header>
             <figure className="List__item__figure">
                 <img src={placeholder} alt=""/>

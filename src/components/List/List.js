@@ -5,6 +5,14 @@ import Pagination from '../Pagination';
 import './List.css';
 
 class List extends Component {
+    componentDidMount() {
+        const { pageFromUrl, changePage } = this.props;
+
+        if (pageFromUrl) {
+            changePage(pageFromUrl);
+        }
+    }
+
     getItems(items) {
         const list = [];
 
@@ -44,7 +52,8 @@ List.propTypes = {
     currentPage: PropTypes.number.isRequired,
     pages: PropTypes.number.isRequired,
     items: PropTypes.object,
-    changePage: PropTypes.func
+    changePage: PropTypes.func,
+    pageFromUrl: PropTypes.number
 }
 
 export default List;

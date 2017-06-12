@@ -21,14 +21,11 @@ const list = (state = List(), action) => {
     }
 };
 
-const pagination = (state = Map(), action) => {
+const pagination = (state = Map({currentPage: 1, pages: []}), action) => {
     switch (action.type) {
         case FETCH_ITEMS_SUCCESS:
             const itemsId = action.data.map(page => page.ads.map(item => item.id));
-            return itemsId.length ? Map({
-                currentPage: 1,
-                pages: itemsId
-            }) : Map();
+            return itemsId.length ? state.set('pages', itemsId) : state;
         case CHANGE_PAGE:
             return state.set('currentPage', action.page);
         default:
