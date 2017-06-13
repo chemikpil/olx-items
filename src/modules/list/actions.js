@@ -1,5 +1,3 @@
-import {apiUrl} from './constants';
-
 export const FETCH_ITEMS_REQUEST = 'FETCH_ITEMS_REQUEST';
 
 export const FETCH_ITEMS_FAILURE = 'FETCH_ITEMS_FAILURE';
@@ -17,13 +15,6 @@ export const fetchItems = () => (dispatch) => {
     dispatch({
         type: FETCH_ITEMS_REQUEST
     });
-
-    return fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => dispatch(fetchItemsSuccess(data)))
-        .catch(err => dispatch({
-            type: FETCH_ITEMS_FAILURE
-        }));
 };
 
 export const CHANGE_PAGE = 'CHANGE_PAGE';
