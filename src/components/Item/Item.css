@@ -1,12 +1,24 @@
 .Item {
+    display: flex;
+}
+
+.Item__article {
     padding: 10px 0;
     margin-bottom: 20px;
+    flex-grow: 3;
 
     border: 1px solid #CBDFEC;
 
     background-color: #FFF;
 
     color: #28485E;
+}
+
+.Item__sidebar {
+    display: none;
+    width: 25%;
+    min-width: 25%;
+    margin-left: 20px;
 }
 
 .Item__back {    
@@ -84,4 +96,30 @@
     background-color: #28485E;
 
     color: #FFF;
+}
+
+@media screen and (min-width: 960px) {
+    .Item__sidebar {
+        display: block;
+    }
+}
+
+.Section {
+    border: 1px solid #CBDFEC;
+
+    background-color: #FFF;
+}
+
+.Section__title {
+    margin: 0;
+    padding: 5px 10px;
+
+    border-bottom: 1px solid #CBDFEC;
+
+    line-height: 30px;
+    text-align: center;
+}
+
+.Section__content {
+    padding: 10px 20px;
 }
