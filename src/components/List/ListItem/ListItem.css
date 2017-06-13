@@ -19,12 +19,6 @@
     margin-top: 10px;
 }
 
-.List__item__figure {
-    min-width: 130px;
-    width: 130px;
-    margin-right: 0;
-}
-
 .List__item__figure img {
     max-width: 100%;
 }
@@ -41,6 +35,12 @@
 }
 
 @media screen and (min-width: 800px) {
+    .List__item__figure {
+        min-width: 130px;
+        width: 130px;
+        margin-right: 0;
+    }
+    
     .List__item a {
         flex-direction: row;
         text-align: left;
