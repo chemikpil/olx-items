@@ -20,7 +20,7 @@ class Pagination extends Component{
                 links.push(
                     <Link 
                         key={page} 
-                        to={`/list/${page}`}
+                        to={`/list/page/${page}`}
                         onClick={() => onClick(page)}
                         className="Pagination__item"
                     >{page}</Link>

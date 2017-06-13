@@ -6,7 +6,7 @@ import placeholder from './img/placeholder.png';
 
 const ListItem = ({ title, id, data, location }) => (
     <article className="List__item">
-        <Link to={`/item/${id}`}>
+        <Link to={`/list/${id}`}>
             <header>
                 <h3 className="Item__list__title">{title}</h3>
                 <p className="Item__list__meta"><time>{data}</time> | {location}</p>
